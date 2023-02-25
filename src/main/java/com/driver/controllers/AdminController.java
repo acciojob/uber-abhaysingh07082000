@@ -12,6 +12,13 @@ import java.util.List;
 @RequestMapping("/admin")
 public class AdminController {
 
+
+	@Autowired
+	AdminService adminService;
+
+
+
+
 	@PostMapping("/register")
 	public ResponseEntity<Void> registerAdmin(@RequestBody Admin admin){
 		return new ResponseEntity<>(HttpStatus.OK);
